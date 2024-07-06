@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tech Goals</title>
+    <title>My Tech Goals for 2 Years</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <div class="container">
-            <h1>My Tech Goals for the Next 2 Years</h1>
-        </div>
+        <h1>My Tech Goals for the Next 2 Years</h1>
     </header>
-    
     <main>
+        <img src="https://ca.slack-edge.com/T07466B189M-U07AQ4S7U56-4c5aa2d51f7e-48" alt="Profile Picture" data-testid="slackProfilePicture">
+        <section>
+            <p data-testid="slackDisplayName">Paragon</p>
+    
+            <p data-testid="currentDay" id="currentDay"></p>
+            <p data-testid="currentTimeUTC" id="currentTime"></p>
+    
+    
+            <p data-testid="slackEmail">hassanabdullahioluwaseyi@gmail.com</p>
+
+        </section>
+
+
+        
         <section id="goals">
-            <div class="container">
-                <h2>Goals</h2>
-                <p>I aim to enhance my skills in frontend development, particularly focusing on frameworks like React.js and Vue.js. Additionally, I plan to dive deeper into backend technologies such as Node.js and MongoDB.</p>
-            </div>
+            <span></span><h2>My Goals</h2><span></span>
+            <p>As a web developer, my goals for the next two years include mastering advanced frameworks, diversifying project experience, staying current with industry trends, enhancing collaboration skills, and expanding my professional network.</p>
         </section>
-
-        <section id="details">
-            <div class="container">
-                <h2>Details</h2>
-                <ul>
-                    <li data-testid="slackDisplayName">Paragon</li>
-                    <li data-testid="currentTimeUTC" id="timeContent"></li>
-                    <li data-testid="currentDay" id="day"></li>
-                    <li data-testid="slackEmail">hassanabdullahioluwaseyi@gmail.com</li>
-                    <li data-testid="slackProfilePicture"><img src="https://ca.slack-edge.com/T07466B189M-U07AQ4S7U56-4c5aa2d51f7e-48" alt="Slack Profile Picture"></li>
-                    <li data-testid="hngLink"><a href="https://hng.tech/learn">Learn more about HNG</a></li>
-                    <li data-testid="keywordLink"><a href="https://keyword.dog">Explore keyword.dog</a></li>
-                    <li data-testid="scrapeanywebLink"><a href="https://scrapeanyweb.site">Visit scrapeanyweb.site</a></li>
-                </ul>
-            </div>
-        </section>
+        <nav>
+            <ul>
+                <li><a href="https://hng.tech/learn" data-testid="hngLink">Learn at HNG</a></li>
+                <li><a href="https://keyword.dog" data-testid="keywordLink">Keyword Dog</a></li>
+                <li><a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrape Any Web</a></li>
+            </ul>
+        </nav>
     </main>
-
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Paragon. All rights reserved.</p>
-        </div>
+        <h1>&copy; 2024 Paragon</h1>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>

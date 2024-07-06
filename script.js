@@ -1,31 +1,20 @@
-const currentDay = new Date().getDay();
-switch (currentDay) {
-    case 0:
-        day = "Sunday";
-        break;
-    case 1:
-        day = "Monday";
-        break;
-    case 2:
-        day = "Tuesday";
-        break;
-    case 3:
-        day = "Wednesday";
-        break;
-    case 4:
-        day = "Thursday";
-        break;
-    case 5:
-        day = "Friday";
-        break;
-    case 6:
-        day = "Saturday";
+document.addEventListener('DOMContentLoaded', function() {
+    updateTime();
+    updateDay();
+});
+
+function updateTime() {
+    const currentTimeElement = document.getElementById('currentTime');
+    const now = new Date();
+    const timeString = now.toISOString().slice(11, 19); // Extract HH:mm:ss from ISO string
+    currentTimeElement.textContent = timeString + ' UTC';
+    setTimeout(updateTime, 1000); // Update time every second
 }
-const currentTimeUtc = new Date().toUTCString();
-console.log(currentDay);
 
-const timeContent = document.getElementById(['timeContent']);
-const dayContent = document.getElementById(['day']);
-
-timeContent.innerHTML = currentTimeUtc;
-dayContent.innerHTML = day;
+function updateDay() {
+    const currentDayElement = document.getElementById('currentDay');
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const now = new Date();
+    const dayOfWeek = daysOfWeek[now.getUTCDay()];
+    currentDayElement.textContent = dayOfWeek;
+}
